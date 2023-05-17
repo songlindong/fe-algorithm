@@ -22,4 +22,13 @@
     let ele = {
         next:head
     }
+    let p = ele
+    while(p.next){
+     if(p.next.val === val){
+        p.next = p.next.next
+     }else{
+        p = p.next
+     }
+    }
+    return ele.next
  };
